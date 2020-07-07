@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { TextField, Button } from '@material-ui/core';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import { sendContact } from '../../api/v1/api';
 
 const useStyles = makeStyles((theme) => ({
 	textInput: {
@@ -40,10 +41,10 @@ function SimpleForm({ setSubmitted }) {
 	});
 
 	const handleSubmit = (values, actions) => {
-		console.log(values);
-		console.log(actions);
+		const { name, email } = values;
 		actions.resetForm();
 		setSubmitted(true);
+		sendContact(name, email);
 	};
 
 	return (
