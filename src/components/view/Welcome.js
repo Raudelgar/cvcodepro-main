@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 		width: '97%',
 		margin: '0 auto',
 		flexGrow: 1,
-		padding: theme.spacing(2),
+		// padding: theme.spacing(2),
 	},
 	paper: {
 		textAlign: 'center',
@@ -28,6 +28,14 @@ const useStyles = makeStyles((theme) => ({
 	textHeader: {
 		color: '#0d47a1',
 		fontWeight: 500,
+	},
+	footer: {
+		display: 'flex',
+		flexDirection: 'columns',
+		justifyContent: 'center',
+		alignItems: 'center',
+		marginTop: '30px',
+		padding: '10px',
 	},
 }));
 
@@ -80,7 +88,7 @@ function Welcome({ setSubmitted, handleImageLoad }) {
 					</Paper>
 				</Grid>
 			</Grid>
-			<div className={classes.paper}>
+			<div className={classes.footer}>
 				<Typography variant='caption' color='textSecondary'>
 					Copyright Ⓒ 2020 CvCodePro Inc. All rights reserved.
 				</Typography>

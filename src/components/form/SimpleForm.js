@@ -12,7 +12,8 @@ const useStyles = makeStyles((theme) => ({
 		color: '#616161',
 	},
 	btn: {
-		marginTop: '40px',
+		marginTop: '30px',
+		marginBottom: '10px',
 	},
 }));
 
